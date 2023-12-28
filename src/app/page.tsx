@@ -1,4 +1,4 @@
-import { Typography } from "../components/Typography";
+import { Typography } from "../components/Typography/Typography";
 export default function Home() {
   return (
     <>
@@ -68,6 +68,41 @@ export default function Home() {
         <Typography variant="textXs" color="Gray1" fw="regular" as="p" center>
           Small Text Regular
         </Typography>
+        <Typography center>Default Text</Typography>
+        <Typography color="White" center>
+          Primary Text
+        </Typography>
+        <Typography color="Primary" center>
+          Primary color
+        </Typography>
+        <Typography color="Primary-text" center>
+          Primary Text
+        </Typography>
+        <Typography color="Secondary" center>
+          secondary Text
+        </Typography>
+        <Typography color="Secondary-text" center>
+          secondary Text
+        </Typography>
+        <Typography color="Gray1" center>
+          Gray1 Text
+        </Typography>
+        <Typography color="Gray2" center>
+          Gray2 Text
+        </Typography>
+        <Typography color="Gray3" center>
+          Gray3 Text
+        </Typography>
+        <Typography color="Gray4" center>
+          Gray4 Text
+        </Typography>
+        <Typography color="Gray5" center>
+          Gray5 Text
+        </Typography>
+        <Typography color="Gray6" center>
+          Gray6 Text
+        </Typography>
+        <Typography variant="displayXl">OK Text</Typography>
       </div>
     </>
   );
