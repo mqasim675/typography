@@ -8,7 +8,6 @@ export interface TypographyProps {
     | "displaySm"
     | "displayXs"
     | "displayXxs"
-    | "base"
     | "textXl"
     | "textLg"
     | "textMd"

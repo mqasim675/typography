@@ -6,7 +6,7 @@ export default function Home() {
         <Typography
           variant="displayXl"
           color="Gray1"
-          fw="exbold"
+          fw="extraBold"
           as="h1"
           center
         >
