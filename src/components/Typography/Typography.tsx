@@ -1,30 +1,12 @@
 "use client";
 
-import { FC, ReactNode, createElement, useState, useMemo } from "react";
+import { FC, useState, useMemo } from "react";
+
 import clsx from "clsx";
 
 import { TypographyProps } from "./interface";
 
-// move to separate file
-const Wrapper = ({
-  tag = "p",
-  children,
-  className,
-}: {
-  // todo
-  tag: TypographyProps["as"];
-  children: ReactNode;
-  className?: string;
-}) => {
-  return createElement(
-    tag,
-    {
-      className,
-    },
-    children
-  );
-};
-
+import { Wrapper } from "./Wrapper";
 export const Typography: FC<TypographyProps> = ({
   variant = "textMd",
   color = "PrimaryText",
@@ -37,13 +19,24 @@ export const Typography: FC<TypographyProps> = ({
 
   useMemo(() => {
     switch (variant) {
-      case "displayXl":
+      case "heading1":
         setCurrentTag("h1");
         break;
-      case "displayLg":
+      case "heading2":
         setCurrentTag("h2");
         break;
-      // to do
+      case "heading3":
+        setCurrentTag("h3");
+        break;
+      case "heading4":
+        setCurrentTag("h4");
+        break;
+      case "heading5":
+        setCurrentTag("h5");
+        break;
+      case "heading6":
+        setCurrentTag("h6");
+        break;
       default:
         setCurrentTag(as);
     }
@@ -54,23 +47,22 @@ export const Typography: FC<TypographyProps> = ({
       <Wrapper
         tag={currentTag}
         className={clsx({
-          ["text-[3rem] leading-[130%]"]: variant === "displayXl",
+          ["text-[3rem] leading-[130%]"]: variant === "heading1",
           ["text-gray-1"]: color === "Gray1",
           ["font-extrabold"]: fw === "extraBold",
           ["font-bold"]: fw === "bold",
           ["font-normal"]: fw === "regular", // use other fw's
           ["text-center"]: center,
-          ["text-4xl leading-[150%]"]: variant === "displayLg",
-          ["text-3xl leading-[150%]"]: variant === "displayMd",
+          ["text-4xl leading-[150%]"]: variant === "heading2",
+          ["text-3xl leading-[150%]"]: variant === "heading3",
           ["text-2xl leading-[150%]"]:
-            variant === "displaySm" || variant === "textXl",
-          ["text-xl leading-[150%]"]: variant === "displayXs",
+            variant === "heading4" || variant === "textLg",
+          ["text-xl leading-[150%]"]: variant === "heading5",
           ["text-lg leading-[150%]"]:
-            variant === "displayXxs" || variant === "textLg",
-          ["text-base leading-[150%]"]: variant === "textMd",
+            variant === "heading6" || variant === "textMd",
+          ["text-base leading-[150%]"]: variant === "textNorm",
           ["text-sm leading-[150%]"]: variant === "textSm",
           ["text-xs leading-[150%]"]: variant === "textXs",
-
           ["text-white"]: color === "White",
           ["text-primary"]: color === "Primary",
           ["text-primary-text"]: color === "Primary-text",

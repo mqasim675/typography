@@ -4,7 +4,7 @@ export default function Home() {
     <>
       <div>
         <Typography
-          variant="displayXl"
+          variant="heading1"
           color="Gray1"
           fw="extraBold"
           as="h1"
@@ -12,46 +12,40 @@ export default function Home() {
         >
           Heading 1
         </Typography>
-        <Typography variant="displayLg" color="Gray1" fw="bold" as="h2" center>
+        <Typography variant="heading2" color="Gray1" fw="bold" as="h2" center>
           Heading 2
         </Typography>
-        <Typography variant="displayMd" color="Gray1" fw="bold" as="h3" center>
+        <Typography variant="heading3" color="Gray1" fw="bold" as="h3" center>
           Heading 3
         </Typography>
-        <Typography variant="displaySm" color="Gray1" fw="bold" as="h4" center>
+        <Typography variant="heading4" color="Gray1" fw="bold" as="h4" center>
           Heading 4
         </Typography>
-        <Typography variant="displayXs" color="Gray1" fw="bold" as="h5" center>
+        <Typography variant="heading5" color="Gray1" fw="bold" as="h5" center>
           Heading 5
         </Typography>
-        <Typography variant="displayXxs" color="Gray1" fw="bold" as="h6" center>
+        <Typography variant="heading6" color="Gray1" fw="bold" as="h6" center>
           Heading 6
-        </Typography>
-        {/* textXl */}
-        <Typography variant="textXl" color="Gray1" fw="bold" as="p" center>
-          Large Text Bold
-        </Typography>
-        <Typography variant="textXl" color="Gray1" fw="regular" as="p" center>
-          Large Text Regular
         </Typography>
         {/* textLg */}
         <Typography variant="textLg" color="Gray1" fw="bold" as="p" center>
-          Medium Text Bold
+          Large Text Bold
         </Typography>
         <Typography variant="textLg" color="Gray1" fw="regular" as="p" center>
-          Medium Text Regular
+          Large Text Regular
         </Typography>
         {/* textMd */}
         <Typography variant="textMd" color="Gray1" fw="bold" as="p" center>
+          Medium Text Bold
+        </Typography>
+        <Typography variant="textMd" color="Gray1" fw="regular" as="p" center>
+          Medium Text Regular
+        </Typography>
+        {/* textNorm */}
+        <Typography variant="textNorm" color="Gray1" fw="bold" as="p" center>
           Normal Text Bold
         </Typography>
-        <Typography
-          variant="displayXxs"
-          color="Gray1"
-          fw="regular"
-          as="p"
-          center
-        >
+        <Typography variant="textNorm" color="Gray1" fw="regular" as="p" center>
           Normal Text Regular
         </Typography>
         {/* textSm */}
@@ -102,7 +96,7 @@ export default function Home() {
         <Typography color="Gray6" center>
           Gray6 Text
         </Typography>
-        <Typography variant="displayXl">OK Text</Typography>
+        <Typography variant="heading1">OK Text</Typography>
       </div>
     </>
   );

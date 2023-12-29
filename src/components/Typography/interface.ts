@@ -2,15 +2,15 @@ export interface TypographyProps {
   center?: boolean;
   as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span";
   variant?:
-    | "displayXl"
-    | "displayLg"
-    | "displayMd"
-    | "displaySm"
-    | "displayXs"
-    | "displayXxs"
-    | "textXl"
+    | "heading1"
+    | "heading2"
+    | "heading3"
+    | "heading4"
+    | "heading5"
+    | "heading6"
     | "textLg"
     | "textMd"
+    | "textNorm"
     | "textSm"
     | "textXs";
   color?:
