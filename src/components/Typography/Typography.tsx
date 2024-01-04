@@ -51,7 +51,7 @@ export const Typography: FC<TypographyProps> = ({
           ["text-gray-1"]: color === "Gray1",
           ["font-extrabold"]: fw === "extraBold",
           ["font-bold"]: fw === "bold",
-          ["font-normal"]: fw === "regular", // use other fw's
+          ["font-normal"]: fw === "regular",
           ["text-center"]: center,
           ["text-4xl leading-[150%]"]: variant === "heading2",
           ["text-3xl leading-[150%]"]: variant === "heading3",
@@ -66,7 +66,7 @@ export const Typography: FC<TypographyProps> = ({
           ["text-white"]: color === "White",
           ["text-primary"]: color === "Primary",
           ["text-primary-text"]: color === "Primary-text",
-          ["text-secondary"]: color === "Pecondary",
+          ["text-secondary"]: color === "Secondary",
           ["text-secondary-text"]: color === "Secondary-text",
           ["text-gray1"]: color === "Gray1",
           ["text-gray2"]: color === "Gray2",
