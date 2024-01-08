@@ -1,7 +1,10 @@
 import { Typography } from "../components/Typography/Typography";
 
 import { Button } from "@/components/Button/Button";
+
 import { DropDown } from "@/components/DropDown/DropDown";
+
+// import { Practices } from "@/components/Practices/practices";
 
 import { TagButton } from "@/components/Tag";
 
@@ -460,6 +463,7 @@ export default function Home() {
             bgColor="Primary-text"
             width
           ></DropDown>
+          {/* <Practices /> */}
         </div>
       </div>
     </>
