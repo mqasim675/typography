@@ -5,15 +5,22 @@ type Colors =
   | "Secondary"
   | "Secondary-text";
 
+interface IDropdownOption {
+  label: string | number;
+  Value: string | number;
+}
 export interface DropDownProps {
-  value: string;
-  lable: string;
+  name?: string;
   color: Colors;
-  bgColor: Colors;
-  onChange: () => void;
-  className: string;
-  Option: string[];
-  variant: "Sm" | "Md" | "Lg";
   width: boolean;
+  bgColor: Colors;
+  className: string;
+  tabIndex?: number;
+  labelName?: string;
+  label: any;
+  // placeHolder?: string;
+  onChange: () => void;
+  options: IDropdownOption[];
+  variant: "Sm" | "Md" | "Lg";
   setSelectOptions: React.Dispatch<React.SetStateAction<string[]>>;
 }

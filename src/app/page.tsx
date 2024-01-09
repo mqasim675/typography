@@ -1,14 +1,41 @@
+"use client";
+
 import { Typography } from "../components/Typography/Typography";
 
 import { Button } from "@/components/Button/Button";
 
 import { DropDown } from "@/components/DropDown/DropDown";
 
-// import { Practices } from "@/components/Practices/practices";
+import { NDropDown } from "@/components/NDropDown/NDropDown";
 
 import { TagButton } from "@/components/Tag";
 
+import { Option2 } from "@/app/interface";
+import { useState } from "react";
+import { Option } from "@/components/DropDown/DropDownOption";
+
 export default function Home() {
+  const [selectedItem, setSelectedItem] = useState<Option2 | null>(null);
+  console.log(selectedItem);
+  const options: Option2[] = [
+    {
+      lable: "ali",
+      value: "ali",
+    },
+    {
+      lable: "ali2",
+      value: "ali2",
+    },
+    {
+      lable: "ali3",
+      value: "ali3",
+    },
+    {
+      lable: "ali4",
+      value: "ali4",
+    },
+  ];
+
   return (
     <>
       <div>
@@ -461,9 +488,16 @@ export default function Home() {
             variant="Md"
             color="Primary"
             bgColor="Primary-text"
-            width
+            label="test"
           ></DropDown>
-          {/* <Practices /> */}
+        </div>
+        <div>
+          <NDropDown
+            placeholder="Team"
+            options={options}
+            onChange={(selection: Option2) => setSelectedItem(selection)}
+            selected={selectedItem}
+          />
         </div>
       </div>
     </>

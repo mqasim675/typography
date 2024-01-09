@@ -4,11 +4,9 @@ import Image from "next/image";
 
 import * as React from "react";
 
-import { useState } from "react";
+import { useState, FC } from "react";
 
 import clsx from "clsx";
-
-import { FC } from "react";
 
 import { DropDownProps } from "./interface";
 
@@ -18,7 +16,7 @@ import PolygonBlack from "@/Asset/Images/PolygonBlack.svg";
 
 import PolygonRed from "@/Asset/Images/PolygonRed.svg";
 
-export const DropDown: FC<DropDownProps> = ({ color, variant }) => {
+export const DropDown: FC<DropDownProps> = ({ color, variant, label }) => {
   const [open, setOpen] = useState<boolean>(false);
   const [data, setData] = useState<any>(Option);
   const [selectedValue, setSelectedValue] = useState<any>(null);
@@ -28,7 +26,6 @@ export const DropDown: FC<DropDownProps> = ({ color, variant }) => {
     setOpen(!open);
     setIsClicked(!isClicked);
   };
-
   const handleSelect = (item: any) => {
     setSelectedValue(item);
     setOpen(false);
@@ -59,7 +56,8 @@ export const DropDown: FC<DropDownProps> = ({ color, variant }) => {
                 variant === "Md",
             })}
           >
-            {data?.map((item: any, index: number) => (
+            <option>{label}</option>
+            {Option?.map((item: any, index: number) => (
               <li
                 key={index}
                 onClick={() => handleSelect(item)}
