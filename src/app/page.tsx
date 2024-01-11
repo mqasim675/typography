@@ -11,9 +11,14 @@ import { NDropDown } from "@/components/NDropDown/NDropDown";
 import { TagButton } from "@/components/Tag";
 
 import { Option2 } from "@/app/interface";
+
 import { useState } from "react";
+
 import { Option } from "@/components/DropDown/DropDownOption";
 
+// import { ApiData } from "@/components/API/sample";
+
+import MyComponent from "@/components/API/linkedin";
 export default function Home() {
   const [selectedItem, setSelectedItem] = useState<Option2 | null>(null);
   console.log(selectedItem);
@@ -499,6 +504,10 @@ export default function Home() {
             selected={selectedItem}
           />
         </div>
+        <div>{/* <ApiData /> */}</div>
+        <>
+          <MyComponent />
+        </>
       </div>
     </>
   );
