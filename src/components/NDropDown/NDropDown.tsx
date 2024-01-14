@@ -28,25 +28,34 @@ export const NDropDown: FC<SelectProps> = ({
 
   const toggleDropdown = () => {
     setShowOption(!showOption);
-    setIsClicked(true);
+    setIsClicked(!isClicked);
     console.log("showOption", showOption);
   };
 
   return (
     <div>
-      <div
-        onClick={toggleDropdown}
-        style={{ color: isClicked ? "#DD1E33" : "#111928" }}
-        className="flex items-center h-10 py-3 px-2 cursor-pointer text-base font-medium text-white tracking-widest leading-6 w-fit"
-      >
-        {selected ? selected.lable : placeholder}
-
-        <div className="ml-1">
-          {showOption ? (
-            <Image src={PolygonRed} alt="logo" />
-          ) : (
-            <Image src={PolygonBlack} alt="logo" />
-          )}
+      <div className="flex items-center" onClick={toggleDropdown}>
+        <div
+          style={{ color: isClicked ? "#DD1E33" : "#111928" }}
+          className="flex items-center h-10 py-3 px-2 cursor-pointer text-base font-medium text-white tracking-widest leading-6 w-fit"
+        >
+          {selected ? selected.lable : placeholder}
+        </div>
+        <div>
+          <svg
+            width="7"
+            height="5"
+            viewBox="0 0 7 5"
+            fill={isClicked ? "#ff0000" : "#111928"}
+            xmlns="http://www.w3.org/2000/svg"
+            style={{ cursor: "pointer" }}
+          >
+            <path
+              id="Polygon 13"
+              d="M3.89816 4.17235C3.70513 4.35591 3.40208 4.35591 3.20905 4.17236L0.516927 1.61233C0.189712 1.30117 0.409937 0.749999 0.861478 0.749999L6.24573 0.75C6.69727 0.75 6.9175 1.30117 6.59028 1.61233L3.89816 4.17235Z"
+              fill={isClicked ? "#ff0000" : "#111928"}
+            />
+          </svg>
         </div>
       </div>
       {showOption && (
